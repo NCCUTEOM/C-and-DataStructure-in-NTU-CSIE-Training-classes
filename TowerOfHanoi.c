@@ -12,7 +12,7 @@ int push(int value,int stack[],int top){
 int pop(int stack[],int top){ 
 	int temp;
 	
-	if( top == -1 ){ //§PÂ_°ïÅ|¬O§_¬°ªÅªº
+	if( top == -1 ){ //åˆ¤æ–·å †ç–Šæ˜¯å¦ç‚ºç©ºçš„
 		return -1; 
 	} 
 	temp = stack[top]; 
@@ -26,13 +26,13 @@ int pop(int stack[],int top){
 
 
 void hanoi (int n, char from, char mid, char to,int ptr[]){   
-// ¦b·h°Ê²Än­Ó¶ê½L®É 
+// åœ¨æ¬å‹•ç¬¬nå€‹åœ“ç›¤æ™‚ 
 	if(n==0) return ; 
-//¥ı±N²Än-1­Ó¶ê½L·h¨ì¡¨¤¤¶¡¶ğ¡¨ 
-	hanoi(n-1,from, to, mid,ptr); //?±N¦Û¤v·h¨ì¡¨¥Ø¼Ğ¶ğ¡¨ 
+//å…ˆå°‡ç¬¬n-1å€‹åœ“ç›¤æ¬åˆ°â€ä¸­é–“å¡”â€ 
+	hanoi(n-1,from, to, mid,ptr); //?å°‡è‡ªå·±æ¬åˆ°â€ç›®æ¨™å¡”â€ 
 	printf("plate%2d from %c -> %c\n",n,from,to); 
 	ptr[n-1]++;
-	//¦A±N²Än-1­Ó¶ê½L±q¡¨¤¤¶¡¶ğ¡¨·h¦^¨Ó 
+	//å†å°‡ç¬¬n-1å€‹åœ“ç›¤å¾â€ä¸­é–“å¡”â€æ¬å›ä¾† 
 	hanoi(n-1,mid, from, to,ptr); 
 }
 
@@ -42,7 +42,7 @@ int main() {
     int topA = -1,topB = -1,topC = -1;
     
     
-  //  printf("½Ğ¿é¤J½L¼Æ¡G");
+  //  printf("è«‹è¼¸å…¥ç›¤æ•¸ï¼š");
     scanf("%d", &n);
     int *towerA = malloc(n*sizeof(int));
     int *towerB = malloc(n*sizeof(int));
